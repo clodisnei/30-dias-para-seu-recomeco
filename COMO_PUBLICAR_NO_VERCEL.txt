@@ -1,0 +1,23 @@
+PROJETO COMPLETO — 30 DIAS PARA O SEU RECOMEÇO
+
+1. Extraia este arquivo ZIP.
+2. No GitHub, envie TODOS os arquivos e a pasta icons para a raiz do repositório.
+3. A raiz do repositório deve mostrar diretamente:
+   index.html
+   app.js
+   styles.css
+   manifest.webmanifest
+   sw.js
+   vercel.json
+   README.txt
+   COMO_PUBLICAR_NO_VERCEL.txt
+   icons/icon.svg
+4. No Vercel, importe o repositório.
+5. Framework Preset: Other.
+6. Root Directory: deixe como ./ (raiz).
+7. Build Command, Output Directory e Install Command: deixe vazios.
+8. Clique em Deploy. Se o projeto já existe, faça um novo commit ou use Redeploy.
+
+IMPORTANTE:
+Não envie apenas o arquivo HTML. O index.html depende de app.js, styles.css,
+manifest.webmanifest, sw.js e da pasta icons.

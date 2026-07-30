@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#163a36">
+  <meta name="description" content="Aplicativo acessível do plano 30 Dias para o Seu Recomeço, do livro O Que Restou de Mim.">
+  <title>30 Dias para o Seu Recomeço</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="topbar">
+    <button class="brand" type="button" data-route="home" aria-label="Ir para o início">
+      <span class="brand-mark" aria-hidden="true">OR</span>
+      <span><strong>30 Dias</strong><small>para o seu recomeço</small></span>
+    </button>
+    <div class="top-actions">
+      <button class="icon-button" id="readPage" type="button" aria-label="Ouvir esta página" title="Ouvir esta página">▶</button>
+      <button class="icon-button" id="accessibilityButton" type="button" aria-label="Abrir opções de acessibilidade" title="Acessibilidade">Aa</button>
+    </div>
+  </header>
+  <main id="conteudo" tabindex="-1"></main>
+  <nav class="bottom-nav no-print" aria-label="Navegação principal">
+    <button type="button" data-route="home"><span aria-hidden="true">⌂</span>Início</button>
+    <button type="button" data-route="journey"><span aria-hidden="true">◌</span>Jornada</button>
+    <button type="button" data-route="journal"><span aria-hidden="true">✎</span>Registros</button>
+    <button type="button" data-route="about"><span aria-hidden="true">i</span>Sobre</button>
+  </nav>
+  <dialog id="accessibilityDialog" aria-labelledby="accessibilityTitle">
+    <form method="dialog" class="dialog-card">
+      <div class="dialog-heading">
+        <div><p class="eyebrow">Preferências</p><h2 id="accessibilityTitle">Acessibilidade</h2></div>
+        <button class="icon-button" value="cancel" aria-label="Fechar">×</button>
+      </div>
+      <fieldset>
+        <legend>Tamanho do texto</legend>
+        <div class="segmented">
+          <button type="button" data-font="small">A−</button>
+          <button type="button" data-font="normal">A</button>
+          <button type="button" data-font="large">A+</button>
+          <button type="button" data-font="xlarge">A++</button>
+        </div>
+      </fieldset>
+      <label class="switch-row"><span><strong>Alto contraste</strong><small>Aumenta o contraste de textos e controles.</small></span><input id="contrastToggle" type="checkbox" role="switch"></label>
+      <label class="switch-row"><span><strong>Modo escuro</strong><small>Reduz o brilho da tela em ambientes escuros.</small></span><input id="darkToggle" type="checkbox" role="switch"></label>
+      <label class="switch-row"><span><strong>Movimento reduzido</strong><small>Desativa animações de transição.</small></span><input id="motionToggle" type="checkbox" role="switch"></label>
+      <button class="button secondary full" value="cancel">Concluir</button>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

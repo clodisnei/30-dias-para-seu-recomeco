@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ícone 30 Dias para o Seu Recomeço">
+  <rect width="512" height="512" rx="112" fill="#163a36"/>
+  <circle cx="370" cy="390" r="145" fill="none" stroke="#b98645" stroke-width="48" opacity=".82"/>
+  <path d="M104 126h218M104 202h164M104 278h126" stroke="#fffdf8" stroke-width="32" stroke-linecap="round"/>
+  <text x="104" y="410" fill="#fffdf8" font-family="Georgia,serif" font-size="116" font-weight="700">30</text>
+</svg>
