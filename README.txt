@@ -1,3 +1,5 @@
+VERSÃO 3 — PROJETO COMPLETO PARA GITHUB E VERCEL
+
 30 DIAS PARA O SEU RECOMEÇO — VERSÃO COMPLETA
 
 Conteúdo:
@@ -23,3 +25,5 @@ Os registros ficam no armazenamento local do navegador e não são enviados a se
 AUTORIA
 Clodisnei Cavalcante Peres
 O Que Restou de Mim
+
+Consulte também NOVIDADES_VERSAO_3.txt.

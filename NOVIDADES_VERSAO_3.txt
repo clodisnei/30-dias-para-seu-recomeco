@@ -1,0 +1,14 @@
+30 DIAS PARA O SEU RECOMEÇO — VERSÃO 3
+
+Melhorias adicionadas:
+- apresentação inicial em três telas;
+- explicação mais clara da origem do plano e da ligação com o livro;
+- seção ampliada sobre o livro, ISBN e autor;
+- orientação sobre ritmo flexível;
+- página de privacidade;
+- reflexões favoritas em “O que quero levar comigo”;
+- lembretes de backup nos Dias 7, 14, 21 e 30;
+- botão “Gerar meu caderno em PDF”;
+- análise descritiva da jornada;
+- compartilhamento do endereço do plano sem compartilhar registros;
+- atualização do cache offline.

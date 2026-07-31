@@ -1,7 +1,7 @@
 {
   "name": "30 Dias para o Seu Recomeço",
   "short_name": "30 Dias",
-  "description": "Plano interativo e acessível do livro O Que Restou de Mim.",
+  "description": "Extensão interativa e acessível do plano de 30 dias do livro O Que Restou de Mim.",
   "lang": "pt-BR",
   "start_url": "./",
   "display": "standalone",

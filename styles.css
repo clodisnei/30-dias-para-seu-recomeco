@@ -226,3 +226,55 @@ body.reduce-motion *, body.reduce-motion *::before, body.reduce-motion *::after 
   .hero p, .hero .eyebrow, .muted, small { color: #222 !important; }
   .page { animation: none; }
 }
+
+
+/* Melhorias editoriais e de jornada — versão 3 */
+.origin-grid { display:grid; grid-template-columns:180px 1fr; gap:24px; align-items:center; }
+.book-cover-mockup { min-height:248px; display:flex; flex-direction:column; justify-content:center; padding:24px 20px; border-radius:8px 20px 20px 8px; color:#fff; background:linear-gradient(145deg,#0f2c29,#24574f); box-shadow:12px 14px 26px rgba(15,44,41,.24); font-family:Georgia,serif; font-size:1.65rem; line-height:1.02; letter-spacing:.02em; text-align:left; }
+.book-cover-mockup.large { min-height:310px; font-size:2rem; }
+.book-cover-mockup .cover-kicker { font-size:.72em; color:#dfc496; }
+.book-cover-mockup i { display:block; width:70%; height:2px; margin:22px 0 18px; background:#d3a15e; }
+.book-cover-mockup small { color:#f4e4c8; font-family:Inter,system-ui,sans-serif; font-size:.7rem; line-height:1.4; }
+.onboarding { min-height:520px; display:flex; flex-direction:column; justify-content:center; text-align:center; padding:38px 28px; }
+.onboarding-icon { display:grid; place-items:center; width:94px; height:94px; margin:0 auto 22px; border-radius:30px; background:var(--primary); color:#fff; font-family:Georgia,serif; font-size:2rem; font-weight:900; }
+.onboarding-dots { display:flex; justify-content:center; gap:8px; margin-bottom:22px; }
+.onboarding-dots span { width:10px; height:10px; border-radius:999px; background:var(--border); }
+.onboarding-dots span.active { width:30px; background:var(--accent); }
+.onboarding-actions { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:24px; }
+.text-link { padding:0; border:0; background:transparent; color:var(--primary-2); text-decoration:underline; font-weight:850; }
+.privacy-callout { margin-top:14px; }
+.favorite-button { display:flex; align-items:center; gap:8px; width:100%; min-height:50px; margin-top:20px; padding:10px 14px; border:2px solid var(--border); border-radius:14px; color:var(--text); background:var(--surface-2); font-weight:850; text-align:left; }
+.favorite-button span { color:var(--accent); font-size:1.35rem; }
+.favorite-button.active { border-color:var(--accent); background:var(--accent-soft); }
+.favorite-list { display:grid; gap:12px; }
+.favorite-item { display:grid; grid-template-columns:1fr auto; align-items:center; gap:16px; padding:14px 0; border-top:1px solid var(--border); }
+.favorite-item:first-child { border-top:0; }
+.favorite-item p { margin:.35rem 0 0; color:var(--muted); }
+.book-meta { display:grid; gap:8px; margin:18px 0; }
+.book-meta div { display:grid; grid-template-columns:95px 1fr; gap:10px; padding:9px 0; border-bottom:1px solid var(--border); }
+.book-meta dt { font-weight:850; }
+.book-meta dd { margin:0; }
+.insight-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.participation-bars { display:grid; gap:16px; margin:20px 0; }
+.bar-label { display:flex; justify-content:space-between; gap:12px; margin-bottom:6px; }
+.mini-track { height:12px; overflow:hidden; border-radius:999px; background:var(--surface-2); }
+.mini-track span { display:block; height:100%; border-radius:inherit; background:var(--accent); }
+.comparison-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.comparison-card { padding:16px; border:1px solid var(--border); border-radius:16px; background:var(--surface-2); }
+.comparison-card strong,.comparison-card span,.comparison-card small { display:block; }
+.comparison-card span { margin:.4rem 0; font-family:Georgia,serif; font-size:1.5rem; }
+.backup-hero h1 { max-width:650px; }
+@media (max-width:650px) {
+  .origin-grid { grid-template-columns:1fr; }
+  .book-cover-mockup { width:min(78%,260px); margin:0 auto; }
+  .insight-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .favorite-item { grid-template-columns:1fr; }
+}
+@media (max-width:420px) {
+  .onboarding-actions { display:grid; }
+  .onboarding-actions .button { width:100%; }
+  .comparison-grid { grid-template-columns:1fr; }
+}
+
+.hero .quote small { color: rgba(255,255,255,.78); }
+body.dark .hero .quote small { color:#283b36; }

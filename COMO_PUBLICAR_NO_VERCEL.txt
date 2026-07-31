@@ -11,6 +11,7 @@ PROJETO COMPLETO — 30 DIAS PARA O SEU RECOMEÇO
    vercel.json
    README.txt
    COMO_PUBLICAR_NO_VERCEL.txt
+   NOVIDADES_VERSAO_3.txt
    icons/icon.svg
 4. No Vercel, importe o repositório.
 5. Framework Preset: Other.
