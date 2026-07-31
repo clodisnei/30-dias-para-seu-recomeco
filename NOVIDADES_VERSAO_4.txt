@@ -1,0 +1,16 @@
+NOVIDADES DA VERSÃO 4
+
+- Estrutura pronta para seis áudios na voz do autor.
+- Transcrição acessível de todas as mensagens.
+- Pasta audio já criada com instruções.
+- Pasta capa já criada com instruções.
+- Capa oficial exibida automaticamente ao adicionar capa/capa-livro.jpg.
+- Capa provisória usada como alternativa quando a imagem não existe.
+- Botão para conhecer ou adquirir o livro, configurável no arquivo config.js.
+- Página completa de instalação para Android e iPhone/iPad.
+- Ícones PNG de 192, 512 e Apple Touch Icon.
+- Manifesto PWA aprimorado e atalhos do aplicativo.
+- Lembrete diário opcional, com horário escolhido pelo leitor.
+- Teste de notificação e aviso honesto sobre limites de segundo plano.
+- Cache atualizado para a versão 4.
+- Melhor tratamento offline para imagens e áudios opcionais.

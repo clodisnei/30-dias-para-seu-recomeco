@@ -1,0 +1,13 @@
+PASTA DOS ÁUDIOS DO AUTOR
+
+Coloque nesta pasta exatamente estes seis arquivos em MP3:
+
+1. boas-vindas.mp3
+2. etapa-1-reconhecer.mp3
+3. etapa-2-movimento.mp3
+4. etapa-3-significado-identidade.mp3
+5. etapa-4-continuidade.mp3
+6. mensagem-final.mp3
+
+Não altere os nomes. Depois envie esta pasta inteira ao GitHub e aguarde o novo deploy do Vercel.
+Os reprodutores e as transcrições já estão preparados no aplicativo.

@@ -1,29 +1,28 @@
-VERSÃO 3 — PROJETO COMPLETO PARA GITHUB E VERCEL
+30 DIAS PARA O SEU RECOMEÇO — VERSÃO 4
+Aplicativo web progressivo do livro O Que Restou de Mim
+Autor: Clodisnei Cavalcante Peres
 
-30 DIAS PARA O SEU RECOMEÇO — VERSÃO COMPLETA
+ARQUIVOS PRINCIPAIS
+- index.html: página inicial
+- styles.css: aparência e acessibilidade
+- app.js: aplicativo e os 30 dias
+- media.js: títulos, caminhos e transcrições dos seis áudios
+- config.js: endereço de compra/apresentação do livro
+- manifest.webmanifest: instalação como aplicativo
+- sw.js: funcionamento offline e clique em notificações
+- vercel.json: configuração para Vercel
+- icons/: ícones do aplicativo
+- audio/: pasta pronta para os MP3
+- capa/: pasta pronta para a capa oficial
 
-Conteúdo:
-- 30 dias completos, organizados em quatro etapas;
-- avaliação inicial e compromisso pessoal;
-- revisão dos 30 dias;
-- plano de manutenção para os próximos 90 dias;
-- salvamento automático de rascunhos;
-- backup e restauração em JSON;
-- resumo imprimível ou salvável em PDF;
-- leitura em voz alta, ditado e opções de acessibilidade;
-- manifesto e service worker para instalação e uso offline.
-
-TESTE LOCAL
-Abra index.html para testar as funções principais. Alguns navegadores restringem o service worker e a instalação quando o arquivo é aberto diretamente.
-
-PUBLICAÇÃO
-Envie toda esta pasta, preservando os nomes e a estrutura, para uma hospedagem HTTPS. Pode ser Netlify, Vercel, GitHub Pages ou hospedagem própria. Depois de publicado, o navegador poderá oferecer a instalação na tela inicial e o modo offline.
+ANTES DE PUBLICAR
+Leia ADICIONAR_CAPA_E_AUDIOS.txt.
 
 PRIVACIDADE
-Os registros ficam no armazenamento local do navegador e não são enviados a servidor. O leitor deve fazer backup antes de limpar o navegador ou trocar de aparelho.
+Os registros continuam salvos localmente no navegador. O aplicativo não possui cadastro nem envia as respostas ao autor.
 
-AUTORIA
-Clodisnei Cavalcante Peres
-O Que Restou de Mim
+LEMBRETES
+A versão 4 permite escolher um horário e solicitar permissão de notificação. Como não existe servidor de push, alguns navegadores podem suspender notificações quando o aplicativo estiver totalmente fechado. O aplicativo verifica o lembrete novamente quando é aberto.
 
-Consulte também NOVIDADES_VERSAO_3.txt.
+PUBLICAÇÃO
+Envie o conteúdo desta pasta para a raiz do repositório no GitHub. No Vercel use Framework Preset: Other e deixe os comandos de build vazios.

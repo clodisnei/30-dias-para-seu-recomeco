@@ -1,0 +1,29 @@
+COMO COMPLETAR A VERSÃO 4
+
+1. CAPA
+- Abra a pasta capa.
+- Coloque a imagem oficial com o nome: capa-livro.jpg
+
+2. ÁUDIOS
+- Abra a pasta audio.
+- Coloque os seis MP3 com estes nomes:
+  boas-vindas.mp3
+  etapa-1-reconhecer.mp3
+  etapa-2-movimento.mp3
+  etapa-3-significado-identidade.mp3
+  etapa-4-continuidade.mp3
+  mensagem-final.mp3
+
+3. LINK DO LIVRO
+- Abra o arquivo config.js.
+- Cole o endereço da Amazon ou da página de venda entre as aspas de bookUrl.
+Exemplo:
+  bookUrl: 'https://endereco-do-livro.com',
+
+4. PUBLICAÇÃO
+- Envie todos os arquivos e pastas para a raiz do repositório do GitHub.
+- Faça o commit.
+- O Vercel deverá publicar automaticamente.
+
+5. CACHE
+Se o celular ainda mostrar a versão antiga, feche o aplicativo, abra o endereço em uma guia anônima ou remova e instale novamente. A versão do cache foi atualizada para v4.

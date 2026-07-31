@@ -1,0 +1,11 @@
+PASTA DA CAPA OFICIAL
+
+Coloque nesta pasta a capa oficial em JPG com este nome exato:
+
+capa-livro.jpg
+
+Caminho final esperado:
+capa/capa-livro.jpg
+
+Depois envie a pasta ao GitHub e aguarde o novo deploy do Vercel.
+Enquanto a imagem não estiver presente, o aplicativo mostrará uma capa provisória em texto.

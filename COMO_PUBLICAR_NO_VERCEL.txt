@@ -1,24 +1,17 @@
-PROJETO COMPLETO — 30 DIAS PARA O SEU RECOMEÇO
+PUBLICAÇÃO NO GITHUB E VERCEL
 
-1. Extraia este arquivo ZIP.
-2. No GitHub, envie TODOS os arquivos e a pasta icons para a raiz do repositório.
-3. A raiz do repositório deve mostrar diretamente:
-   index.html
-   app.js
-   styles.css
-   manifest.webmanifest
-   sw.js
-   vercel.json
-   README.txt
-   COMO_PUBLICAR_NO_VERCEL.txt
-   NOVIDADES_VERSAO_3.txt
-   icons/icon.svg
-4. No Vercel, importe o repositório.
-5. Framework Preset: Other.
-6. Root Directory: deixe como ./ (raiz).
-7. Build Command, Output Directory e Install Command: deixe vazios.
-8. Clique em Deploy. Se o projeto já existe, faça um novo commit ou use Redeploy.
+1. Extraia este ZIP.
+2. Adicione a capa e os áudios seguindo ADICIONAR_CAPA_E_AUDIOS.txt. Isso também pode ser feito depois.
+3. Envie TODOS os arquivos e pastas para a raiz do repositório no GitHub.
+4. Verifique se index.html aparece diretamente na raiz.
+5. No Vercel:
+   Framework Preset: Other
+   Root Directory: ./
+   Build Command: vazio
+   Output Directory: vazio
+   Install Command: vazio
+6. Faça Deploy ou Redeploy.
 
-IMPORTANTE:
-Não envie apenas o arquivo HTML. O index.html depende de app.js, styles.css,
-manifest.webmanifest, sw.js e da pasta icons.
+IMPORTANTE
+Não envie apenas o ZIP ao GitHub. Extraia-o primeiro.
+As pastas audio e capa contêm arquivos LEIA-ME.txt para que sejam mantidas pelo GitHub mesmo antes de você adicionar os MP3 e o JPG.
