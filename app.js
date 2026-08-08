@@ -71,7 +71,49 @@ function audioCard(key,compact=false) {
   return `<section class="${compact?'audio-card compact':'section card audio-card'}" data-audio-card><div class="audio-heading"><span class="audio-icon" aria-hidden="true">♪</span><div><p class="eyebrow">Na voz do autor</p><h2>${escapeHTML(item.title)}</h2><p>${escapeHTML(item.description || '')}</p></div></div><audio controls preload="metadata" aria-label="${escapeHTML(item.title)}"><source data-audio-source src="${escapeHTML(item.src)}" type="audio/mpeg">Seu navegador não conseguiu reproduzir este áudio.</audio><p class="media-missing" data-media-missing hidden><strong>Áudio ainda não adicionado.</strong> Coloque o arquivo <code>${escapeHTML(item.src)}</code> no projeto e publique novamente.</p><details class="transcript"><summary>Ler a transcrição</summary><div>${transcript}</div></details></section>`;
 }
 function bookButtons() {
-  return `<div class="hero-actions"><button class="button primary" type="button" data-buy-book>${escapeHTML(APP_CONFIG.bookButtonLabel || 'Conhecer ou adquirir o livro')}</button><button class="button secondary" type="button" id="sharePlan">Compartilhar o plano</button></div>`;
+
+  const products = [
+    {
+      key: 'physicalBookUrl',
+      label: APP_CONFIG.physicalBookLabel || 'Comprar livro físico',
+      icon: '📘',
+      primary: true
+    },
+    {
+      key: 'ebookUrl',
+      label: APP_CONFIG.ebookLabel || 'Comprar e-book',
+      icon: '📱',
+      primary: false
+    },
+    {
+      key: 'methodUrl',
+      label: APP_CONFIG.methodLabel || 'Conhecer o Método',
+      icon: '🌱',
+      primary: false
+    }
+  ];
+
+  const buttons = products.map(product => {
+
+    const available = String(APP_CONFIG[product.key] || '').trim();
+
+    return `
+      <button
+        class="button ${product.primary ? 'primary' : 'secondary'}"
+        type="button"
+        data-product-link="${product.key}">
+        <span aria-hidden="true">${product.icon}</span>
+        ${escapeHTML(product.label)}
+        ${available ? '' : ' — em breve'}
+      </button>
+    `;
+  }).join('');
+
+  return `
+    <div class="hero-actions">
+      ${buttons}
+    </div>
+  `;
 }
 function isStandalone() { return window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true; }
 function reminderSummaryCard() {
