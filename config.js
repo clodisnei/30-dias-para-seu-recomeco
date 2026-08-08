@@ -11,12 +11,12 @@
 window.APP_CONFIG = {
 
   physicalBookUrl: '',
-  ebookUrl: '',
+  ebookUrl: 'https://a.co/d/03eUkRlg',
   methodUrl: '',
 
   physicalBookLabel: 'Comprar livro físico',
   ebookLabel: 'Comprar e-book',
-  methodLabel: 'Conhecer o Método',
+  methodLabel: 'Conhecer o Método MATÉRIA',
 
   coverPath: 'capa/capa-livro.jpg'
 };
