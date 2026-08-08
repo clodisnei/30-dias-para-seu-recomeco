@@ -87,7 +87,7 @@ function bookButtons() {
     },
     {
       key: 'methodUrl',
-      label: APP_CONFIG.methodLabel || 'Conhecer o Método MATÉRIA',
+      label: APP_CONFIG.methodLabel || 'Conhecer o Método',
       icon: '🌱',
       primary: false
     }
