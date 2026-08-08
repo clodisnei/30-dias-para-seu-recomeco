@@ -178,7 +178,7 @@ function homePage() {
     </section>
     ${audioCard('welcome')}
     <section class="section card origin-card">
-      <div class="origin-grid">${bookCoverMarkup()}<div><p class="eyebrow">De onde nasceu este plano</p><h2>Uma história real transformada em prática</h2><p>O livro reúne uma trajetória de perdas, limitações, luto e reconstrução. Este aplicativo transforma aprendizados dessa caminhada em reflexões, práticas possíveis, perguntas e passos mínimos.</p><p><strong>Você não precisa ter lido o livro para começar.</strong> Na obra, encontrará a história e as experiências que deram origem a esta jornada.</p><div class="actions-stack"><button class="button secondary" data-route="about">Conhecer o livro e o autor</button><button class="button secondary" data-buy-book>${escapeHTML(APP_CONFIG.bookButtonLabel || 'Conhecer ou adquirir o livro')}</button></div></div></div>
+      <div class="origin-grid">${bookCoverMarkup()}<div><p class="eyebrow">De onde nasceu este plano</p><h2>Uma história real transformada em prática</h2><p>O livro reúne uma trajetória de perdas, limitações, luto e reconstrução. Este aplicativo transforma aprendizados dessa caminhada em reflexões, práticas possíveis, perguntas e passos mínimos.</p><p><strong>Você não precisa ter lido o livro para começar.</strong> Na obra, encontrará a história e as experiências que deram origem a esta jornada.</p><div class="actions-stack"><button class="button secondary" data-route="about">Conhecer o livro e o autor</button>${bookButtons()}</div></div></div>
     </section>
     <section class="section card install-banner" id="installBanner"><p class="eyebrow">Instalar</p><h2>${isStandalone()?'Aplicativo instalado':'Use como aplicativo'}</h2><p>${isStandalone()?'Você já está usando a versão instalada.':'Adicione o plano à tela inicial para abrir com um toque e usar os conteúdos já visitados mesmo sem internet.'}</p><div class="hero-actions">${isStandalone()?'':`<button class="button secondary" id="installApp">Instalar aplicativo</button>`}<button class="button secondary" data-route="install">Ver instruções</button></div></section>
     <section class="section card"><p class="eyebrow">Como funciona</p><h2>Um caminho que cabe na vida real</h2>
@@ -441,7 +441,8 @@ function bindPageEvents() {
   document.querySelectorAll('[data-favorite-day]').forEach(btn=>btn.addEventListener('click',()=>toggleFavorite(Number(btn.dataset.favoriteDay))));
   document.querySelectorAll('#exportData').forEach(btn=>btn.addEventListener('click',exportData));
   document.querySelectorAll('#sharePlan').forEach(btn=>btn.addEventListener('click',sharePlan));
-  document.querySelectorAll('[data-buy-book]').forEach(btn=>btn.addEventListener('click',openBookLink));
+  document.querySelectorAll('[data-product-link]').forEach(btn =>
+  btn.addEventListener('click', openProductLink));
   document.querySelector('#importData')?.addEventListener('change',importData);
   document.querySelector('#printSummary')?.addEventListener('click',()=>window.print());
   document.querySelector('#clearData')?.addEventListener('click',()=>{if(confirm('Apagar todos os registros deste aplicativo neste aparelho?')){try{localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(LEGACY_KEY);}catch{}state=clone(initialState);applySettings();routeTo('home');toast('Os dados foram apagados.');}});
@@ -470,10 +471,32 @@ function bindOptionalMedia() {
     audio?.load();
   });
 }
-function openBookLink() {
-  const url=String(APP_CONFIG.bookUrl || '').trim();
-  if(!url){toast('O link de compra ainda não foi configurado. Edite o arquivo config.js.');routeTo('about');return;}
-  try{window.open(new URL(url,location.href).href,'_blank','noopener,noreferrer');}catch{toast('O endereço do livro no config.js não é válido.');}
+function openProductLink(event) {
+
+  const key = event.currentTarget.dataset.productLink;
+
+  const labels = {
+    physicalBookUrl: 'O livro físico',
+    ebookUrl: 'O e-book',
+    methodUrl: 'O Método'
+  };
+
+  const url = String(APP_CONFIG[key] || '').trim();
+
+  if (!url) {
+    toast(`${labels[key] || 'Este produto'} estará disponível em breve.`);
+    return;
+  }
+
+  try {
+    window.open(
+      new URL(url, location.href).href,
+      '_blank',
+      'noopener,noreferrer'
+    );
+  } catch {
+    toast('O endereço configurado não é válido.');
+  }
 }
 async function saveReminderSettings(event) {
   event.preventDefault();
